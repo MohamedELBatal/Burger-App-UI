@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class LiveChatTab extends StatelessWidget {
   static const String routeName = "live chat";
@@ -10,17 +9,18 @@ class LiveChatTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: Colors.white,
-      appBar: AppBar(backgroundColor: Colors.transparent,elevation: 0,),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: Column(
+      appBar: AppBar(
+        title: Text("Live Chat"),
+        backgroundColor: Colors.red,
+        elevation: 0,
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView(
+              padding: const EdgeInsets.all(10.0),
               children: [
                 Row(
                   children: [
@@ -36,9 +36,7 @@ class LiveChatTab extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const SizedBox(
-                      width: 15,
-                    ),
+                    const SizedBox(width: 15),
                     Container(
                       height: 50,
                       width: 250,
@@ -48,17 +46,15 @@ class LiveChatTab extends StatelessWidget {
                       ),
                       child: const Center(
                         child: Text(
-                          "Hi,how can i help you ?",
-                          style:
-                              TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                          "Hi, how can I help you?",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17),
                         ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -73,17 +69,14 @@ class LiveChatTab extends StatelessWidget {
                         padding: EdgeInsets.all(18.0),
                         child: Center(
                           child: Text(
-                            "Hello, I ordered two fried chicken burgers."
-                            " can I know how much time it will get to arrive?",
+                            "Hello, I ordered two fried chicken burgers. Can I know how much time it will take to arrive?",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 17),
                           ),
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 15,
-                    ),
+                    const SizedBox(width: 15),
                     Container(
                       height: 50,
                       width: 50,
@@ -98,9 +91,7 @@ class LiveChatTab extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 Row(
                   children: [
                     Container(
@@ -115,9 +106,7 @@ class LiveChatTab extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const SizedBox(
-                      width: 15,
-                    ),
+                    const SizedBox(width: 15),
                     Container(
                       height: 50,
                       width: 250,
@@ -127,17 +116,15 @@ class LiveChatTab extends StatelessWidget {
                       ),
                       child: const Center(
                         child: Text(
-                          "Ok, please let me check !",
-                          style:
-                              TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                          "Ok, please let me check!",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17),
                         ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -152,16 +139,14 @@ class LiveChatTab extends StatelessWidget {
                         padding: EdgeInsets.all(18.0),
                         child: Center(
                           child: Text(
-                            "sure...",
+                            "Sure...",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 17),
                           ),
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 15,
-                    ),
+                    const SizedBox(width: 15),
                     Container(
                       height: 50,
                       width: 50,
@@ -176,9 +161,7 @@ class LiveChatTab extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 Row(
                   children: [
                     Container(
@@ -193,9 +176,7 @@ class LiveChatTab extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const SizedBox(
-                      width: 15,
-                    ),
+                    const SizedBox(width: 15),
                     Container(
                       height: 75,
                       width: 240,
@@ -207,7 +188,7 @@ class LiveChatTab extends StatelessWidget {
                         padding: EdgeInsets.all(15.0),
                         child: Center(
                           child: Text(
-                            "It’ll get 25 minutes to arrive to your address",
+                            "It’ll take 25 minutes to arrive at your address.",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 17),
                           ),
@@ -216,9 +197,7 @@ class LiveChatTab extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -233,16 +212,14 @@ class LiveChatTab extends StatelessWidget {
                         padding: EdgeInsets.all(18.0),
                         child: Center(
                           child: Text(
-                            "Ok, thanks you for your support",
+                            "Ok, thank you for your support.",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 17),
                           ),
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 15,
-                    ),
+                    const SizedBox(width: 15),
                     Container(
                       height: 50,
                       width: 50,
@@ -257,50 +234,51 @@ class LiveChatTab extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border(top: BorderSide(color: Colors.grey.shade200)),
+            ),
+            child: Row(
+              children: [
                 Expanded(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            fillColor: Colors.red,
-                            hintText: "Type here ...",
-                            hintStyle:
-                            const TextStyle(fontSize: 15, color: Colors.grey),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(25),
-                            ),
-                          ),
-                        ),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      fillColor: Colors.red.shade50,
+                      filled: true,
+                      hintText: "Type here ...",
+                      hintStyle: const TextStyle(fontSize: 15, color: Colors.grey),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25),
+                        borderSide: BorderSide.none,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: InkWell(
-                          onTap: () {},
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: Colors.red,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: const Icon(
-                              Icons.send,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: const Icon(
+                      Icons.send,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
             ),
           ),
-        ),
+        ],
       ),
     );
   }

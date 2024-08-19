@@ -66,14 +66,20 @@ class _HomeState extends State<Home> {
         inactiveColor: Colors.white,
         blurEffect: true,
         onTap: (value) {
-          index = value;
-          bottomNavIndex = index ;
           setState(() {
-            if(const LiveChatTab() == index){
-              Navigator.pushNamed(context, Chat.routeName);
+            bottomNavIndex = value;
+            if (bottomNavIndex == 2) {  // الرقم 2 هنا يشير إلى أيقونة الشات في القائمة
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LiveChatTab()), // Chat هنا يشير إلى صفحة الشات
+              );
+            }
+            else {
+              index = value;
             }
           });
         },
+
         //other params
       ),
       body: tabs[index],
